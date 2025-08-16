@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Comic+Neue:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF8FB1', //粉
+            secondary: '#BDE0FE', //蓝
+            accent: '#FFD6A5', //橙
+            dark: '#606C5D', //墨绿
+            light: '#FFFADD' //浅橙
+          },
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            handwriting: ['"Comic Neue"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .border-dashed-custom {
+                border-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264.888-.14 1.24.916 1.774 1.344 3.369 1.344 1.644 0 2.309-.633 3.457-1.629.353-.282.85-.095.85.399v.08c0 .619-.622 1.067-1.672 1.52-1.33.57-2.776.93-4.339.93-3.15-1.073-4.57-1.94-5.683-3.04-.344-.365-.24-.91.207-1.175l1.617-.809c.47-.235.94-.47 1.408-.704.473-.237.948-.47 1.417-.71-.02-.01-.038-.02-.058-.03-.34-.185-.717.088-.796.48-.12.564.396 1.054.944 1.054.31 0 .564-.165.747-.415.12-.165.238-.33.358-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495c.18-.415.765-.67 1.24-.555.474.115.824.564.824 1.064 0 .08 0 .16-.017.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24h.08c.16 0 .32-.015.48-.045.16-.03.32-.075.48-.12.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135c.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135zm-3.63-15.542c.357-.13.72-.264.888-.14 1.24.916 1.774 1.344 3.369 1.344 1.644 0 2.309-.633 3.457-1.629.353-.282.85-.095.85.399v.08c0 .619-.622 1.067-1.672 1.52-1.33.57-2.776.93-4.339.93-3.15-1.073-4.57-1.94-5.683-3.04-.344-.365-.24-.91.207-1.175l1.617-.809c.47-.235.94-.47 1.408-.704zm57.328 6.286c.357-.13.72-.264.888-.14 1.24.916 1.774 1.344 3.369 1.344 1.644 0 2.309-.633 3.457-1.629.353-.282.85-.095.85.399v.08c0 .619-.622 1.067-1.672 1.52-1.33.57-2.776.93-4.339.93-3.15-1.073-4.57-1.94-5.683-3.04-.344-.365-.24-.91.207-1.175l1.617-.809c.47-.235.94-.47 1.408-.704zM22.22 2.72c.357-.13.72-.264.888-.14 1.24.916 1.774 1.344 3.369 1.344 1.644 0 2.309-.633 3.457-1.629.353-.282.85-.095.85.399v.08c0 .619-.622 1.067-1.672 1.52-1.33.57-2.776.93-4.339.93-3.15-1.073-4.57-1.94-5.683-3.04-.344-.365-.24-.91.207-1.175l1.617-.809c.47-.235.94-.47 1.408-.704zm57.328 6.286c.357-.13.72-.264.888-.14 1.24.916 1.774 1.344 3.369 1.344 1.644 0 2.309-.633 3.457-1.629.353-.282.85-.095.85.399v.08c0 .619-.622 1.067-1.672 1.52-1.33.57-2.776.93-4.339.93-3.15-1.073-4.57-1.94-5.683-3.04-.344-.365-.24-.91.207-1.175l1.617-.809c.47-.235.94-.47 1.408-.704zM2.898 10.345l.257-.128c.47-.235.94-.47 1.408-.704.473-.237.948-.47 1.417-.71-.02-.01-.038-.02-.058-.03-.34-.185-.717.088-.796.48-.12.564.396 1.054.944 1.054.31 0 .564-.165.747-.415.12-.165.238-.33.358-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495.12-.165.24-.33.36-.495c.18-.415.765-.67 1.24-.555.474.115.824.564.824 1.064 0 .08 0 .16-.017.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24-.02.08-.04.16-.06.24h.08c.16 0 .32-.015.48-.045.16-.03.32-.075.48-.12.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135c.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135.16-.045.32-.09.48-.135z' fill='%23ff8fb1' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E") 20% repeat;
+            }
+            .paper-texture {
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23606c5d' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            }
+            .paw-print {
+                position: relative;
+                width: 40px;
+                height: 30px;
+            }
+            .wiggle {
+                animation: wiggle 2s ease-in-out infinite;
+            }
+            @keyframes wiggle {
+                0%, 100% { transform: rotate(-3deg); }
+                50% { transform: rotate(3deg); }
+            }
+            .float {
+                animation: float 3s ease-in-out infinite;
+            }
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+            @keyframes fadeOut {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        }
+    </style>
+</head>
+
+<body>
+  <div class="fixed float top-10 left-10 opacity-20"><i class="fa fa-paw text-6xl text-primary"></i></div>
+  <div class="fixed float opacity-20 top-1/3 right-20"><i class="fa fa-heart text-4xl text-primary"></i></div>
+  <div class="fixed float opacity-20 bottom-20 right-20"><i class="fa fa-paw text-primary text-5xl"></i></div>
+  <div class="bg-secondary min-h-screen font-sans text-dark overflow-x-hidden">
+    <div class="container mx-auto text-center py-12 md:py-20 px-4">
+      <h1 class="text-primary text-[clamp(2rem,5vw,3.5rem)] text-shadow font-bold mb-4 md:mb-8">
+        <i class="fa fa-heart animate-pulse"></i>
+        专属保证书
+        <i class="fa fa-heart animate-pulse"></i>
+      </h1>
+      <div
+        class="max-w-2xl mx-auto bg-light rounded-lg shadow-xl overflow-hidden border-8 border-dashed-custom paper-texture mb-10">
+        <div class="px-6 py-6 bg-primary/10 border-b-2 border-primary/30 md:px-10">
+          <h2 class="text-primary text-center font-bold font-handwriting text-[clamp(1.5rem,3vw,2.2rem)] mb-4">保证书</h2>
+          <div class="w-20 h-1 bg-accent rounded-full mx-auto"></div>
+        </div>
+        <div class="p-8 md:p-12">
+          <div class="mx-auto w-16 h-16 bg-accent rounded-full mb-8 wiggle">
+            <img class="w-full h-full rounded-full object-sover" src="./Flavor.jpg" alt="">
+          </div>
+          <p class="font-handwriting text-[clamp(1.2rem,3vw,1.8rem)] text-center leading-relaxed mb-8">
+            今后只做你一个人的小狗<br>
+            永远对你忠诚<br>
+            永远听你的话<br>
+            永远喜欢你
+          </p>
+          <!-- 装饰性分隔线 -->
+          <div class="flex justify-center items-center gap-4 mb-8">
+            <div class="h-0.5 flex-1 bg-primary/30 rounded-full"></div>
+            <i class="fa fa-heart text-primary"></i>
+            <div class="h-0.5 flex-1 bg-primary/30 rounded-full"></div>
+          </div>
+          <!-- 日期 -->
+          <div class="text-center">
+            <p class="text-dark/70 mb-2">期限</p>
+            <div class="h-8 border-b-2 border-primary/50 w-1/2 mx-auto mb-2"></div>
+            <p class="font-handwriting text-primary">永远</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button id="cuteButton"
+          class="bg-primary hover:bg-primary/80 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105 flex items-center gap-2 mx-auto">
+          <i class="fa fa-paw"></i>
+          <span class="">确认这份承诺</span>
+        </button>
+        <div class="fixed inset-0 pointer-events-none z-50" id="hearts"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("cuteButton").addEventListener("click", function () {
+      createHearts(15);
+      this.classList.add('scale-95');
+      setTimeout(() => {
+        this.classList.remove('scale-95');
+      }, 200);
+    });
+    function createHearts(count) {
+      const heartsContainer = document.getElementById('hearts');
+
+      for (let i = 0; i < count; i++) {
+        const heart = document.createElement('div');
+        heart.innerHTML = '<i class="fa fa-heart"></i>';
+        heart.className = 'absolute text-primary/80';
+
+        const size = Math.random() * 20 + 10;
+        const left = Math.random() * 100;
+        const top = Math.random() * 100;
+        const delay = Math.random() * 3;
+        const duration = Math.random() * 3 + 2;
+
+        heart.style.left = `${left}%`;
+        heart.style.top = `${top}%`;
+        heart.style.fontSize = `${size}px`;
+        heart.style.animation = `float ${duration}s ease-in-out ${delay}s forwards, fadeOut 5s ease-in-out forwards`;
+
+        heartsContainer.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, (duration + delay) * 1000);
+      }
+    }
+  </script>
+</body>
+
+</html>
